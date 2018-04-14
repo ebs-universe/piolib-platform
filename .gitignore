@@ -1,0 +1,4 @@
+msp430/
+avr/
+.kdev4/
+src.kdev4
