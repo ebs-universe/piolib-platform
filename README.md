@@ -1,2 +1,3 @@
-# ebs-driver-pinled
-Simple driver for LEDs on uC pins. 
+# ebs-library-platform
+Common EBS Platform Interfaces
+ 
