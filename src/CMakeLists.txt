@@ -18,8 +18,11 @@ SET(PROJECT_VERSION_TWEAK   0)
 
 INCLUDE(ebs/lib-conf)
 
-FILE(GLOB_RECURSE SOURCES *.c)
-FILE(GLOB_RECURSE HEADERS *.h)
+ADD_FILES(HEADERS asm.h
+                  cpu.h
+                  romem.h
+                  transport.h
+                  types.h)
 
 IF(${CMAKE_CURRENT_SOURCE_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
     # This library is a quick hack to just get some shared header files into 
