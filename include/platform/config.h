@@ -3,6 +3,6 @@
 #ifndef PLATFORM_PINLED_CONFIG_H
 #define PLATFORM_PINLED_CONFIG_H
 
-#define PLATFORM_VERSION       "0.1.0"
+#define PLATFORM_VERSION       "0.1.1"
 
 #endif

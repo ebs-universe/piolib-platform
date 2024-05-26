@@ -33,7 +33,7 @@
 #ifndef PLATFORM_ASM_H
 #define PLATFORM_ASM_H
 
-#ifdef GCC_MSP430
+#ifdef __MSP430__
 
 #define PC  r0   
 #define SP  r1

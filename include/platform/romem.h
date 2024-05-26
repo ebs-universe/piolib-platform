@@ -28,7 +28,7 @@
     #define ROMEM_READ_WORD(addr)   pgm_read_word(addr)
     #define ROMEM_READ_DWORD(addr)  pgm_read_dword(addr)
     #define ROMEM_READ_BYTE(addr)   pgm_read_byte(addr)
-#else
+#elif defined __MSP430__
     #define ROMEM  
     #define ROMEM_TABLE_P(_t)       &(_t[0])
     #define ROMEM_READ_WORD(addr)   *(uint16_t *)(addr)

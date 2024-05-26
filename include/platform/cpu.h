@@ -1,4 +1,3 @@
-
 /* 
    Copyright (c)
      (c) 2018 Chintalagiri Shashank, Quazar Technologies Pvt. Ltd.
@@ -20,15 +19,44 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
 */
 
-#include<stdint.h>
+/**
+ * @file platform/cpu.h
+ * @brief Definitions for EBS CPU controls
+ * 
+ */
 
-#ifdef GCC_MSP430
 
-typedef uint8_t HAL_BASE_t;
-typedef uint16_t HAL_INT_t;
-typedef volatile uint16_t HAL_SFR_t;
-typedef uint16_t HAL_ADDRESS_t;
-typedef uint8_t PORTSELECTOR_t;
-typedef uint16_t PINSELECTOR_t;
+#ifndef PLATFORM_CPU_H
+#define PLATFORM_CPU_H
+
+#if defined __AVR__
+    #include <avr/interrupt.h>
+    static inline void global_interrupt_enable(void){
+        sei();
+    }
+    
+    static inline void global_interrupt_disable(void){
+        cli();
+    }
+#elif defined __MSP430__
+    #include <msp430.h>
+    static inline void global_interrupt_enable(void){
+        __eint();
+    }
+    
+    static inline void global_interrupt_disable(void){
+        __dint();
+    }
+#endif
+
+static inline void critical_enter(void){
+    global_interrupt_disable();
+}
+
+static inline void critical_exit(void){
+    global_interrupt_enable();
+}
 
 #endif
+
+

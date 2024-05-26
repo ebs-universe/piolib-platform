@@ -1,3 +1,4 @@
+
 /* 
    Copyright (c)
      (c) 2018 Chintalagiri Shashank, Quazar Technologies Pvt. Ltd.
@@ -19,44 +20,24 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
 */
 
-/**
- * @file platform/cpu.h
- * @brief Definitions for EBS CPU controls
- * 
- */
+#include<stdint.h>
 
+#ifdef __AVR__
 
-#ifndef PLATFORM_CPU_H
-#define PLATFORM_CPU_H
+typedef uint8_t HAL_BASE_t;
+typedef uint16_t HAL_INT_t;
+typedef volatile uint8_t HAL_SFR_t;
+typedef uint16_t HAL_ADDRESS_t;
+typedef uint8_t PORTSELECTOR_t;
+typedef uint8_t PINSELECTOR_t;
 
-#if defined GCC_AVR
-    #include <avr/interrupt.h>
-    static inline void global_interrupt_enable(void){
-        sei();
-    }
-    
-    static inline void global_interrupt_disable(void){
-        cli();
-    }
-#elif defined GCC_MSP430
-    #include <msp430.h>
-    static inline void global_interrupt_enable(void){
-        __eint();
-    }
-    
-    static inline void global_interrupt_disable(void){
-        __dint();
-    }
-#endif
+#elif defined __MSP430__
 
-static inline void critical_enter(void){
-    global_interrupt_disable();
-}
-
-static inline void critical_exit(void){
-    global_interrupt_enable();
-}
+typedef uint8_t HAL_BASE_t;
+typedef uint16_t HAL_INT_t;
+typedef volatile uint16_t HAL_SFR_t;
+typedef uint16_t HAL_ADDRESS_t;
+typedef uint8_t PORTSELECTOR_t;
+typedef uint16_t PINSELECTOR_t;
 
 #endif
-
-
