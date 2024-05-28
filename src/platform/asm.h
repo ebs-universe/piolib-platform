@@ -1,4 +1,3 @@
-
 /* 
    Copyright (c)
      (c) 2018 Chintalagiri Shashank, Quazar Technologies Pvt. Ltd.
@@ -20,24 +19,25 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
 */
 
-#include<stdint.h>
+/**
+ * @file platform/asm.h
+ * @brief Helper Definitions for ASM files
+ * 
+ * Base assembly files on :
+ * 
+ * MSP430 : 
+ * msp430-elf-gcc -S [source].c -fverbose-asm -fdata-sections -ffunction-sections
+ *
+ */
 
-#ifdef __AVR__
+#ifndef PLATFORM_ASM_H
+#define PLATFORM_ASM_H
 
-typedef uint8_t HAL_BASE_t;
-typedef uint16_t HAL_INT_t;
-typedef volatile uint8_t HAL_SFR_t;
-typedef uint16_t HAL_ADDRESS_t;
-typedef uint8_t PORTSELECTOR_t;
-typedef uint8_t PINSELECTOR_t;
+#ifdef __MSP430__
 
-#elif defined __MSP430__
+#define PC  r0   
+#define SP  r1
+#define SR  r2
 
-typedef uint8_t HAL_BASE_t;
-typedef uint16_t HAL_INT_t;
-typedef volatile uint16_t HAL_SFR_t;
-typedef uint16_t HAL_ADDRESS_t;
-typedef uint8_t PORTSELECTOR_t;
-typedef uint16_t PINSELECTOR_t;
-
+#endif
 #endif
