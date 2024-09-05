@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ebs-platform: PLUGGABLE_TRANSPORT_t Struct Reference</title>
+<title>ebs-platform: PLUGGABLE_STORAGE_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('struct_p_l_u_g_g_a_b_l_e___t_r_a_n_s_p_o_r_t__t.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('struct_p_l_u_g_g_a_b_l_e___s_t_o_r_a_g_e__t.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -88,46 +88,52 @@ $(document).ready(function(){initNavTree('struct_p_l_u_g_g_a_b_l_e___t_r_a_n_s_p
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">PLUGGABLE_TRANSPORT_t Struct Reference</div>  </div>
+<div class="title">PLUGGABLE_STORAGE_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:ace14fa1fa6cd2c050a8b71ec3c76e082"><td class="memItemLeft" align="right" valign="top"><a id="ace14fa1fa6cd2c050a8b71ec3c76e082"></a>
-void(*const&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> )(uint8_t)</td></tr>
-<tr class="separator:ace14fa1fa6cd2c050a8b71ec3c76e082"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82e31eb1b77ac38684d071fabcd9a8f0"><td class="memItemLeft" align="right" valign="top"><a id="a82e31eb1b77ac38684d071fabcd9a8f0"></a>
-uint8_t(*const&#160;</td><td class="memItemRight" valign="bottom"><b>unhandled_rxb</b> )(uint8_t)</td></tr>
-<tr class="separator:a82e31eb1b77ac38684d071fabcd9a8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac242e1b8e75a3776a4efd709d21af3d0"><td class="memItemLeft" align="right" valign="top"><a id="ac242e1b8e75a3776a4efd709d21af3d0"></a>
-uint8_t(*const&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> )(uint8_t, uint8_t *, uint8_t)</td></tr>
-<tr class="separator:ac242e1b8e75a3776a4efd709d21af3d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ddf9341ed41a034349f9b8731125913"><td class="memItemLeft" align="right" valign="top"><a id="a2ddf9341ed41a034349f9b8731125913"></a>
-uint8_t(*const&#160;</td><td class="memItemRight" valign="bottom"><b>reqlock</b> )(uint8_t, uint8_t, uint8_t)</td></tr>
-<tr class="separator:a2ddf9341ed41a034349f9b8731125913"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43a36deefc664760eee0136d6f8d2a8a"><td class="memItemLeft" align="right" valign="top"><a id="a43a36deefc664760eee0136d6f8d2a8a"></a>
-uint8_t(*const&#160;</td><td class="memItemRight" valign="bottom"><b>rellock</b> )(uint8_t, uint8_t)</td></tr>
-<tr class="separator:a43a36deefc664760eee0136d6f8d2a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c83f7842ec9d17905054c0d530039e6"><td class="memItemLeft" align="right" valign="top"><a id="a3c83f7842ec9d17905054c0d530039e6"></a>
-uint8_t(*const&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> )(uint8_t, uint8_t *, uint8_t, uint8_t)</td></tr>
-<tr class="separator:a3c83f7842ec9d17905054c0d530039e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e75bccd0531a8b506c2398cd37b7e8f"><td class="memItemLeft" align="right" valign="top"><a id="a1e75bccd0531a8b506c2398cd37b7e8f"></a>
-void(*const&#160;</td><td class="memItemRight" valign="bottom"><b>flush</b> )(uint8_t)</td></tr>
-<tr class="separator:a1e75bccd0531a8b506c2398cd37b7e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbea78e192b0d81913c0f0ba6a62465c"><td class="memItemLeft" align="right" valign="top"><a id="abbea78e192b0d81913c0f0ba6a62465c"></a>
+HAL_BASE_t&#160;</td><td class="memItemRight" valign="bottom"><b>volume</b></td></tr>
+<tr class="separator:abbea78e192b0d81913c0f0ba6a62465c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5c27fc43c559aa6a9cb71ebd8380099"><td class="memItemLeft" align="right" valign="top"><a id="aa5c27fc43c559aa6a9cb71ebd8380099"></a>
+HAL_BASE_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
+<tr class="separator:aa5c27fc43c559aa6a9cb71ebd8380099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab8ea86c60ceead439840bc081c64ca0"><td class="memItemLeft" align="right" valign="top"><a id="aab8ea86c60ceead439840bc081c64ca0"></a>
+void(*const&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> )(HAL_BASE_t)</td></tr>
+<tr class="separator:aab8ea86c60ceead439840bc081c64ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b37ecb180ca8c3b9f47da6a50cb3f66"><td class="memItemLeft" align="right" valign="top"><a id="a4b37ecb180ca8c3b9f47da6a50cb3f66"></a>
+HAL_BASE_t(*const&#160;</td><td class="memItemRight" valign="bottom"><b>ready</b> )(HAL_BASE_t)</td></tr>
+<tr class="separator:a4b37ecb180ca8c3b9f47da6a50cb3f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3adf06e1166d47a39d269fff389b26c1"><td class="memItemLeft" align="right" valign="top"><a id="a3adf06e1166d47a39d269fff389b26c1"></a>
+HAL_BASE_t(*const&#160;</td><td class="memItemRight" valign="bottom"><b>write_byte</b> )(HAL_BASE_t, uint16_t, uint8_t)</td></tr>
+<tr class="separator:a3adf06e1166d47a39d269fff389b26c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78750dd65252f86edd44a2424704d3b3"><td class="memItemLeft" align="right" valign="top"><a id="a78750dd65252f86edd44a2424704d3b3"></a>
+uint8_t(*const&#160;</td><td class="memItemRight" valign="bottom"><b>read_byte</b> )(HAL_BASE_t, uint16_t)</td></tr>
+<tr class="separator:a78750dd65252f86edd44a2424704d3b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a755aa080529f000f2b243493f5bf34f1"><td class="memItemLeft" align="right" valign="top"><a id="a755aa080529f000f2b243493f5bf34f1"></a>
+HAL_BASE_t(*const&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> )(HAL_BASE_t, uint16_t, const void *, HAL_BASE_t)</td></tr>
+<tr class="separator:a755aa080529f000f2b243493f5bf34f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2dbab77c7c869357bda25c84f0191a3"><td class="memItemLeft" align="right" valign="top"><a id="af2dbab77c7c869357bda25c84f0191a3"></a>
+HAL_BASE_t(*const&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> )(HAL_BASE_t, uint16_t, void *, HAL_BASE_t)</td></tr>
+<tr class="separator:af2dbab77c7c869357bda25c84f0191a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb7df8af9b3f8b4b7188f0413ffb1f3"><td class="memItemLeft" align="right" valign="top"><a id="a0bb7df8af9b3f8b4b7188f0413ffb1f3"></a>
+HAL_BASE_t(*const&#160;</td><td class="memItemRight" valign="bottom"><b>format</b> )(HAL_BASE_t)</td></tr>
+<tr class="separator:a0bb7df8af9b3f8b4b7188f0413ffb1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="transport_8h_source.html#l00035">35</a> of file <a class="el" href="transport_8h_source.html">transport.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="storage_8h_source.html#l00036">36</a> of file <a class="el" href="storage_8h_source.html">storage.h</a>.</p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>platform/<a class="el" href="transport_8h_source.html">transport.h</a></li>
+<li>platform/<a class="el" href="storage_8h_source.html">storage.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="struct_p_l_u_g_g_a_b_l_e___t_r_a_n_s_p_o_r_t__t.html">PLUGGABLE_TRANSPORT_t</a></li>
+    <li class="navelem"><a class="el" href="struct_p_l_u_g_g_a_b_l_e___s_t_o_r_a_g_e__t.html">PLUGGABLE_STORAGE_t</a></li>
     <li class="footer">Generated on Thu Sep 5 2024 09:18:05 for ebs-platform by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
