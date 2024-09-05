@@ -47,6 +47,15 @@
     static inline void global_interrupt_disable(void){
         __dint();
     }
+#elif defined __arm__
+    #include "cmsis_gcc.h"
+    static inline void global_interrupt_enable(void){
+        __enable_irq();
+    }
+    
+    static inline void global_interrupt_disable(void){
+        __disable_irq();
+    }
 #endif
 
 static inline void critical_enter(void){
