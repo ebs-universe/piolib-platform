@@ -29,6 +29,7 @@
 #ifndef PLATFORM_CPU_H
 #define PLATFORM_CPU_H
 
+
 #if defined __AVR__
     #include <avr/interrupt.h>
     static inline void global_interrupt_enable(void){
@@ -48,7 +49,7 @@
         __dint();
     }
 #elif defined __arm__
-    #include "cmsis_gcc.h"
+    #include "stm32f4xx.h"
     static inline void global_interrupt_enable(void){
         __enable_irq();
     }
