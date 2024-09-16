@@ -28,7 +28,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ebs-platform
-   &#160;<span id="projectnumber">0.2.4</span>
+   &#160;<span id="projectnumber">0.2.5</span>
    </div>
    <div id="projectbrief">Common EBS Platform Interfaces</div>
   </td>
@@ -110,7 +110,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Definitions for EBS CPU controls. </p>
 <p>Keeping <a class="el" href="cpu_8h.html" title="Definitions for EBS CPU controls.">cpu.h</a> independent on ARM is a bit of a nightmare.</p>
-<p>We include cmsis.h, which needs to come from a file such as stm324fxx.h, which sets the __CORTEX_M define. </p>
+<p>We need cmsis.h, which needs to come from a file such as stm324fxx.h, which sets the __CORTEX_M define. For such platforms, we expect iomap.h to include the appropriate cpu header, and just use that. </p>
 
 <p class="definition">Definition in file <a class="el" href="cpu_8h_source.html">cpu.h</a>.</p>
 </div></div><!-- contents -->
@@ -119,7 +119,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_c5a52a81292cf9a5167198f4f346d6d9.html">platform</a></li><li class="navelem"><a class="el" href="cpu_8h.html">cpu.h</a></li>
-    <li class="footer">Generated on Mon Sep 16 2024 16:25:52 for ebs-platform by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Sep 16 2024 16:43:24 for ebs-platform by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
