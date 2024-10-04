@@ -47,6 +47,7 @@
     static inline void global_interrupt_disable(void){
         cli();
     }
+
 #elif defined __MSP430__
     #include <msp430.h>
     static inline void global_interrupt_enable(void){
@@ -64,6 +65,14 @@
     static inline void global_interrupt_disable(void){
         __disable_irq();
     }
+#elif (defined __linux__ || defined _WIN32)
+    static inline void global_interrupt_enable(void){
+        ;
+    }
+    
+    static inline void global_interrupt_disable(void){
+        ;
+    }
 #endif
 
 static inline void critical_enter(void){
@@ -72,6 +81,10 @@ static inline void critical_enter(void){
 
 static inline void critical_exit(void){
     global_interrupt_enable();
+}
+
+static inline volatile void nop (void) {
+    asm volatile("nop");
 }
 
 #endif

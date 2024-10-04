@@ -51,4 +51,14 @@ typedef uint32_t HAL_ADDRESS_t;
 typedef uint32_t PORTSELECTOR_t;
 typedef HAL_BASE_t PINSELECTOR_t;
 
+#elif (defined __linux__ || defined _WIN32)
+// 64-bit development platforms
+
+typedef short HAL_BASE_t;
+typedef int HAL_INT_t;
+typedef uint32_t HAL_SFR_t;
+typedef void * HAL_ADDRESS_t;
+typedef short PORTSELECTOR_t;
+typedef short PINSELECTOR_t;
+
 #endif
