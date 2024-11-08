@@ -7,6 +7,7 @@ var dir_c5a52a81292cf9a5167198f4f346d6d9 =
     [ "debug.h", "debug_8h_source.html", null ],
     [ "platform.h", "platform_8h_source.html", null ],
     [ "romem.h", "romem_8h_source.html", null ],
+    [ "sections.h", "sections_8h_source.html", null ],
     [ "storage.h", "storage_8h_source.html", null ],
     [ "transport.h", "transport_8h.html", "transport_8h" ],
     [ "types.h", "types_8h_source.html", null ]

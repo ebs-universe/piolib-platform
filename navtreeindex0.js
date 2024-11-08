@@ -14,7 +14,8 @@ var NAVTREEINDEX0 =
 "pages.html":[],
 "platform_8h_source.html":[1,0,0,5],
 "romem_8h_source.html":[1,0,0,6],
-"storage_8h_source.html":[1,0,0,7],
+"sections_8h_source.html":[1,0,0,7],
+"storage_8h_source.html":[1,0,0,8],
 "struct_p_l_u_g_g_a_b_l_e___s_t_o_r_a_g_e__t.html":[0,0,0],
 "struct_p_l_u_g_g_a_b_l_e___s_t_o_r_a_g_e__t.html#a0bb7df8af9b3f8b4b7188f0413ffb1f3":[0,0,0,0],
 "struct_p_l_u_g_g_a_b_l_e___s_t_o_r_a_g_e__t.html#a3adf06e1166d47a39d269fff389b26c1":[0,0,0,8],
@@ -33,8 +34,8 @@ var NAVTREEINDEX0 =
 "struct_p_l_u_g_g_a_b_l_e___t_r_a_n_s_p_o_r_t__t.html#a82e31eb1b77ac38684d071fabcd9a8f0":[0,0,1,5],
 "struct_p_l_u_g_g_a_b_l_e___t_r_a_n_s_p_o_r_t__t.html#ac242e1b8e75a3776a4efd709d21af3d0":[0,0,1,2],
 "struct_p_l_u_g_g_a_b_l_e___t_r_a_n_s_p_o_r_t__t.html#ace14fa1fa6cd2c050a8b71ec3c76e082":[0,0,1,1],
-"transport_8h.html":[1,0,0,8],
-"transport_8h.html#a49671e33cde8f7d9df622dba0108322b":[1,0,0,8,1],
-"transport_8h_source.html":[1,0,0,8],
-"types_8h_source.html":[1,0,0,9]
+"transport_8h.html":[1,0,0,9],
+"transport_8h.html#a49671e33cde8f7d9df622dba0108322b":[1,0,0,9,1],
+"transport_8h_source.html":[1,0,0,9],
+"types_8h_source.html":[1,0,0,10]
 };
