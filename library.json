@@ -1,6 +1,6 @@
 {
     "name": "ebs-platform",
-    "version": "0.2.6",
+    "version": "0.2.7",
     "description": "Common EBS Platform Interfaces",
     "keywords": "ebs",
     "repository": {
