@@ -1,9 +1,9 @@
 /*
  * section   | speed  | execute | shared | cached | buffered | DMA | ISR 
  * ----------|--------|---------|--------|--------|----------|-----|----
- * DTCM      | Fast   | No      | No     | No     | No       | No  | Yes
- * ITCM      | Fast   | Yes     | No     | No     | No       | No  | Yes
- * SHARED    | Normal | No      | Yes    | No     | No       | Yes | Yes
+ * FASTDATA  | Fast   | No      | No     | No     | No       | No  | Yes
+ * FASTEXEC  | Fast   | Yes     | No     | No     | No       | No  | Yes
+ * SHAREDATA | Normal | No      | Yes    | No     | No       | Yes | Yes
  * <default> | Normal | Yes     | Yes    | Likely | Likely   | No  | No
  * 
  * Memory sections should be created based on each sections capabilities, 
@@ -40,3 +40,23 @@
  * as well, as long as we can ensure HPDMA-only usage. We presently 
  * don't try to do this, and it's unclear what other constraints exist.
  */
+
+#include <iomap.h>
+
+#if MEMMAP_ENABLE_FASTDATA
+    #define FASTDATA    __attribute__((section(".dtcm")))
+#else 
+    #define FASTDATA
+#endif
+
+#if MEMMAP_ENABLE_FASTEXEC 
+    #define FASTEXEC    __attribute__((section(".itcm")))
+#else 
+    #define FASTEXEC
+#endif
+
+#if MEMMAP_ENABLE_SHAREDATA
+    #define SHAREDATA  
+#else
+    #define SHAREDATA  
+#endif
