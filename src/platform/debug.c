@@ -22,12 +22,17 @@ typedef union {
 
 #endif
 
+#pragma GCC push_options 
+#pragma GCC optimize("O0")
+
 
 void die(void) {
     global_interrupt_disable();
     #ifdef __arm__
     CFSR_t cfsr = (CFSR_t)(*((HAL_SFR_t *)0xE000ED28));
     (void) cfsr;
+    uint32_t bfar = *((HAL_SFR_t *)0xE000ED38);
+    (void) bfar;
     #endif
     #if APP_ENABLE_OUTPUT_ERROR
         #if ERROR_POLARITY
@@ -38,3 +43,5 @@ void die(void) {
     #endif
     while(1);
 }
+
+#pragma GCC pop_options 
