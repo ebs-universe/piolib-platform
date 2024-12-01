@@ -1,9 +1,10 @@
 /*
  * section   | speed  | execute | shared | cached | buffered | DMA | ISR 
  * ----------|--------|---------|--------|--------|----------|-----|----
- * FASTDATA  | Fast   | No      | No     | No     | No       | No  | Yes
+ * FASTDATA  | Fast   | No      | No     | No     | No       | Yes | Yes
  * FASTEXEC  | Fast   | Yes     | No     | No     | No       | No  | Yes
  * SHAREDATA | Normal | No      | Yes    | No     | No       | Yes | Yes
+ * ROMEM     | Normal | No      | Yes    | Likely | Likely   | Yes | Yes
  * <default> | Normal | Yes     | Yes    | Likely | Likely   | No  | No
  * 
  * Memory sections should be created based on each sections capabilities, 
@@ -14,31 +15,62 @@
  * If the platform needs no special considerations for any of these, 
  * the names should still be defined but the content can be blank.
  * 
- * Applications and libraries should prepend these to appropriate 
- * definitions when the following conditions are met, for each 
- * individual variable / function : 
+ * Applications and libraries should prepend these for each individual 
+ * variable / function : 
  * 
- *   - Variable R/W in ISR context + DMA context : SHARED
- *   - Variable R/W in DMA context only : SHARED
- *   - Variable R/W in ISR context only : DTCM
- *   - Variable R/W in regular context only, high frequency : DTCM
- *   - Variable R/W in regular context only, low frequency  : <default>
+ *   - Variable R/W in ISR + DMA + Cortex contexts : SHAREDATA
+ *   - Variable R/W in DMA + Cortex contexts only : FASTDATA / SHAREDATA
+ *   - Variable R/W in ISR + Cortex contexts only : FASTDATA / SHAREDATA
+ *   - Variable R/W in Cortex context only, high frequency : FASTDATA
+ *   - Variable R/W in Cortex context only, low frequency  : <default>
  * 
- *   - Function executes in ISR context : ITCM
- *   - Function executes in regular context only, high frequency : ITCM
- *   - Function executes in regular context only, low frequency : <default>
+ *   - Function executes in ISR context : FASTEXEC
+ *   - Function executes in Cortex context only, high frequency : FASTEXEC
+ *   - Function executes in Cortex context only, low frequency : <default>
  * 
- * Note: The stack and heap presently exist in DTCM on the stm32 h7rsxx 
- * linker file, so we might not be able to DMA to/from malloc defined 
- * variables. Consider reconfiguring malloc to use SHARED or another 
- * DMA-accessible region if possible, ideally optionally.
+ *   - Constant data stored in flash : ROMEM (to migrate from romem.h)
+ * 
+ * These are tentative definitions which might need additional review. The 
+ * following open questions must be addressed: 
+ * 
+ *   - It is unclear whether DMA can always access FASTDATA
+ *   - It is unclear whether FASTDATA is ok for data accessed in DMA 
+ *     and ISR contexts
+ * 
+ * The implementation of this is as follows: 
+ * 
+ * STM32H7RS
+ * ---------
+ *   - FASTDATA is DTCM. This is non-cached, non-shared core coupled memory.
+ *     It can be accessed from an interrupt context and probably can be 
+ *     accessed from a DMA context, though there seem to be conflicting 
+ *     information about this. Variables should be treated as volatile
+ *     when being accessed from the Cortex, if the DMA / Interrupt are 
+ *     expected to write to them. (.dtcm)
  *
- * TODO: 
+ *   - FASTEXEC is ITCM. This non-cached, non-shared core coupled memory. It
+ *     can be used in an interrupt context. (.itcm)
  * 
- * HPDMA in CM7 might be able to write to DTCM. If that is the case 
- * for the platform, then it may be ok to put SHARED memory into DTCM 
- * as well, as long as we can ensure HPDMA-only usage. We presently 
- * don't try to do this, and it's unclear what other constraints exist.
+ *   - SHAREDATA is non-cached, shared regular RAM in a separate section. 
+ *     The linker file should put this in a memory region where prefetch 
+ *     and caching are disbaled in the MPU. It can perhaps also be placed 
+ *     into the 16kb SRAM1/2 if it needs to be on AHB instead of AXI. This 
+ *     could perhaps be used to store data which is handled by the DMA and 
+ *     within interrupt contexts, when the data is large but slow enough 
+ *     or where DTCM might hit other constraints. (.shared)
+ * 
+ *   - Default is cacheable RAM and FLASH. ICACHE and DCACHE are presently 
+ *     not enabled, however, expect this to be enabled at some point.
+ * 
+ *   - ROMEM not implemented.
+ * 
+ *   - It seems HPDMA is suited to DTCM and the large SRAM1/2/3/4 on AXI, 
+ *     while GPDMA is suited to the 16kb SRAM1/2 and AHB peripherals. 
+ *     Details to be worked out. It may be necessary to add an additional
+ *     section to be able to use this. For the moment, plan is to use the 
+ *     16kb SRAM1/2 for GPDMA use with SHAREDATA, while HPDMA can be used 
+ *     with FASTDATA in DTCM.
+ * 
  */
 
 #include <iomap.h>
