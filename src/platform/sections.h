@@ -67,7 +67,7 @@
  *   - It seems HPDMA is suited to DTCM and the large SRAM1/2/3/4 on AXI, 
  *     while GPDMA is suited to the 16kb SRAM1/2 and AHB peripherals. 
  *     Details to be worked out. It may be necessary to add an additional
- *     section to be able to use this. For the moment, plan is to use the 
+ *     section to be able to use this. For the moment, plan  is to use the 
  *     16kb SRAM1/2 for GPDMA use with SHAREDATA, while HPDMA can be used 
  *     with FASTDATA in DTCM.
  * 
@@ -88,7 +88,7 @@
 #endif
 
 #if MEMMAP_ENABLE_SHAREDATA
-    #define SHAREDATA  
+    #define SHAREDATA  __attribute__((section(".shared")))
 #else
     #define SHAREDATA  
 #endif
