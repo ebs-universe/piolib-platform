@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['pluggable_5fstorage_5ft_2',['PLUGGABLE_STORAGE_t',['../struct_p_l_u_g_g_a_b_l_e___s_t_o_r_a_g_e__t.html',1,'']]],
-  ['pluggable_5ftransport_5ft_3',['PLUGGABLE_TRANSPORT_t',['../struct_p_l_u_g_g_a_b_l_e___t_r_a_n_s_p_o_r_t__t.html',1,'']]]
+  ['debug_2ec_0',['debug.c',['../debug_8c.html',1,'']]],
+  ['debug_2eh_1',['debug.h',['../debug_8h.html',1,'']]],
+  ['die_2',['die',['../debug_8c.html#a6774ab86372125c00d0f98bc3b2f9ac1',1,'die(void):&#160;debug.c'],['../debug_8h.html#a6774ab86372125c00d0f98bc3b2f9ac1',1,'die(void):&#160;debug.c']]]
 ];
