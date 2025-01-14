@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['fastdata_0',['FASTDATA',['../sections_8h.html#a149ce5c7b85b82f799dbaafdd1b078aa',1,'sections.h']]],
-  ['fastexec_1',['FASTEXEC',['../sections_8h.html#a83ebeb673c6b3ca458ddd1e52a2023ce',1,'sections.h']]]
+  ['ebs_5ffalse_0',['EBS_FALSE',['../constants_8h.html#a0b8060081806f7c1e37a7bd80ad59aac',1,'constants.h']]],
+  ['ebs_5ftrue_1',['EBS_TRUE',['../constants_8h.html#ad4ded4cfac13a65056e5397c3717e787',1,'constants.h']]]
 ];
