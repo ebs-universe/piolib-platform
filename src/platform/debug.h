@@ -3,6 +3,7 @@
 #ifndef DEBUG_H
 #define DEBUG_H
 
+#include <application.h>
 #include <stdarg.h>
 #include "platform/types.h"
 
@@ -26,7 +27,7 @@ static inline HAL_BASE_t debug_write(const void *buffer, HAL_BASE_t len){
 
 static inline HAL_BASE_t debug_printf(const char *format, ...){
     uint8_t rval;
-    va_list args;
+    va_list args;       
     va_start( args, format );
     rval = _debug_printf(format, args);
     va_end(args);
