@@ -1,9 +1,11 @@
 <map id="platform/debug.h" name="platform/debug.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="38,5,173,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,80,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,33,64,70,60,66,93,29"/>
-<area shape="rect" id="Node000003" href="$types_8h.html" title=" " alt="" coords="104,79,235,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="118,29,152,67,148,70,114,33"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="134,152,205,177"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="172,104,172,138,167,138,167,104"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="106,5,241,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,112,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,33,90,74,88,69,154,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="136,79,211,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,31,176,65,171,65,171,31"/>
+<area shape="rect" id="Node000004" href="$types_8h.html" title=" " alt="" coords="235,79,365,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="195,28,269,69,266,74,192,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="265,152,335,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="303,104,303,138,297,138,297,104"/>
 </map>

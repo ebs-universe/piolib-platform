@@ -1,20 +1,21 @@
 <map id="platform/debug.c" name="platform/debug.c">
-<area shape="rect" id="Node000001" title=" " alt="" coords="175,5,308,31"/>
-<area shape="rect" id="Node000002" href="$cpu_8h.html" title="Definitions for EBS CPU controls." alt="" coords="43,79,101,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,33,113,76,111,71,213,28"/>
-<area shape="rect" id="Node000004" href="$debug_8h.html" title=" " alt="" coords="129,79,204,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="231,33,191,71,187,67,228,29"/>
-<area shape="rect" id="Node000006" href="$types_8h.html" title=" " alt="" coords="203,152,333,177"/>
-<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="246,31,266,138,261,139,241,32"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="279,79,385,104"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="258,29,308,68,305,72,254,33"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="410,79,513,104"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="277,28,414,72,412,77,276,33"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="195,5,328,31"/>
+<area shape="rect" id="Node000002" href="$cpu_8h.html" title="Definitions for EBS CPU controls." alt="" coords="47,79,105,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,33,119,77,117,72,231,28"/>
+<area shape="rect" id="Node000004" href="$debug_8h.html" title=" " alt="" coords="224,79,299,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="264,31,264,65,259,65,259,31"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="104,152,211,177"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="253,33,214,80,174,141,169,138,210,77,249,29"/>
+<area shape="rect" id="Node000007" href="$types_8h.html" title=" " alt="" coords="333,152,464,177"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="275,29,380,140,376,144,271,33"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="374,79,477,104"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="289,28,387,71,385,76,287,33"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,152,80,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="70,105,55,140,50,138,65,103"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="104,152,179,177"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="165,105,152,140,147,138,160,103"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="184,102,242,142,239,146,181,106"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="233,225,303,251"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="271,178,271,212,265,212,265,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="73,105,56,141,51,139,68,103"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="246,106,187,146,184,142,243,102"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="235,152,309,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="266,104,271,138,266,139,260,105"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="285,102,365,143,363,148,282,106"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="363,225,434,251"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="401,178,401,212,396,212,396,178"/>
 </map>
