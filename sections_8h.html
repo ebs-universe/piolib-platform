@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ebs-platform<span id="projectnumber">&#160;0.3.4</span>
+   <div id="projectname">ebs-platform<span id="projectnumber">&#160;0.3.5</span>
    </div>
    <div id="projectbrief">Common EBS Platform Interfaces</div>
   </td>
@@ -93,15 +93,22 @@ $(document).ready(function(){initNavTree('sections_8h.html',''); initResizable()
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">sections.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iomap.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">types.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for sections.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="sections_8h__incl.svg" width="159" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="sections_8h__incl.svg" width="238" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="sections_8h__dep__incl.svg" width="159" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="sections_8h_source.html">Go to the source code of this file.</a></p>
@@ -114,6 +121,11 @@ Macros</h2></td></tr>
 <tr class="separator:a83ebeb673c6b3ca458ddd1e52a2023ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd9007757d57552b4614c82855f5ca33" id="r_abd9007757d57552b4614c82855f5ca33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sections_8h.html#abd9007757d57552b4614c82855f5ca33">SHAREDATA</a></td></tr>
 <tr class="separator:abd9007757d57552b4614c82855f5ca33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aca9d7aafde25d39135cd78ec38ba46ad" id="r_aca9d7aafde25d39135cd78ec38ba46ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sections_8h.html#aca9d7aafde25d39135cd78ec38ba46ad">memmap_check_fastmem</a> (HAL_ADDRESS_t ptr)</td></tr>
+<tr class="separator:aca9d7aafde25d39135cd78ec38ba46ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a149ce5c7b85b82f799dbaafdd1b078aa" name="a149ce5c7b85b82f799dbaafdd1b078aa"></a>
@@ -128,7 +140,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sections_8h_source.html#l00081">81</a> of file <a class="el" href="sections_8h_source.html">sections.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sections_8h_source.html#l00085">85</a> of file <a class="el" href="sections_8h_source.html">sections.h</a>.</p>
 
 </div>
 </div>
@@ -144,7 +156,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sections_8h_source.html#l00087">87</a> of file <a class="el" href="sections_8h_source.html">sections.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sections_8h_source.html#l00091">91</a> of file <a class="el" href="sections_8h_source.html">sections.h</a>.</p>
 
 </div>
 </div>
@@ -160,7 +172,28 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sections_8h_source.html#l00093">93</a> of file <a class="el" href="sections_8h_source.html">sections.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sections_8h_source.html#l00097">97</a> of file <a class="el" href="sections_8h_source.html">sections.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aca9d7aafde25d39135cd78ec38ba46ad" name="aca9d7aafde25d39135cd78ec38ba46ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca9d7aafde25d39135cd78ec38ba46ad">&#9670;&#160;</a></span>memmap_check_fastmem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool memmap_check_fastmem </td>
+          <td>(</td>
+          <td class="paramtype">HAL_ADDRESS_t&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="sections_8c_source.html#l00005">5</a> of file <a class="el" href="sections_8c_source.html">sections.c</a>.</p>
 
 </div>
 </div>
@@ -170,7 +203,7 @@ Macros</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_c5a52a81292cf9a5167198f4f346d6d9.html">platform</a></li><li class="navelem"><a class="el" href="sections_8h.html">sections.h</a></li>
-    <li class="footer">Generated on Fri Jan 17 2025 16:41:45 for ebs-platform by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Tue Jan 21 2025 06:09:09 for ebs-platform by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

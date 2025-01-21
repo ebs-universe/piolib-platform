@@ -1,0 +1,13 @@
+<map id="platform/sections.c" name="platform/sections.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="17,5,164,31"/>
+<area shape="rect" id="Node000002" href="$sections_8h.html" title=" " alt="" coords="47,79,135,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,31,93,65,88,65,88,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,80,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,106,60,142,56,139,81,103"/>
+<area shape="rect" id="Node000004" href="$types_8h.html" title=" " alt="" coords="105,152,175,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="101,103,126,139,122,142,97,106"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="54,225,125,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="134,179,108,216,103,213,129,176"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="149,225,232,251"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="151,176,177,213,172,216,146,179"/>
+</map>
