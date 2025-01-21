@@ -21,6 +21,7 @@
 */
 
 #include<stdint.h>
+#include<stdbool.h>
 
 #ifdef __AVR__
 

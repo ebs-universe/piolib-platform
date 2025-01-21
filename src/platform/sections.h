@@ -73,7 +73,11 @@
  * 
  */
 
+#ifndef PLATFORM_SECTIONS_H
+#define PLATFORM_SECTIONS_H
+
 #include <iomap.h>
+#include "types.h"
 
 #if MEMMAP_ENABLE_FASTDATA
     #define FASTDATA    __attribute__((section(".dtcm")))
@@ -91,4 +95,8 @@
     #define SHAREDATA  __attribute__((section(".shared")))
 #else
     #define SHAREDATA  
+#endif
+
+bool memmap_check_fastmem(HAL_ADDRESS_t ptr);
+
 #endif
