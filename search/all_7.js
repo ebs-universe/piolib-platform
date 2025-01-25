@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['locktoken_0',['LOCKTOKEN',['../debug_8c.html#a219c7eb8913b291a5c599705b0c1cdd6',1,'debug.c']]]
+  ['nop_0',['nop',['../cpu_8h.html#a019d17d1a69924be9b45b98bc58b83e4',1,'cpu.h']]]
 ];

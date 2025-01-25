@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['ebs_5fbool_5ft_0',['EBS_BOOL_t',['../constants_8h.html#a553748abc1573c1981ced4f4c44e7323',1,'constants.h']]],
-  ['ebs_5ffalse_1',['EBS_FALSE',['../constants_8h.html#a0b8060081806f7c1e37a7bd80ad59aac',1,'constants.h']]],
-  ['ebs_5ftrue_2',['EBS_TRUE',['../constants_8h.html#ad4ded4cfac13a65056e5397c3717e787',1,'constants.h']]]
+  ['fastdata_0',['FASTDATA',['../sections_8h.html#a149ce5c7b85b82f799dbaafdd1b078aa',1,'sections.h']]],
+  ['fastexec_1',['FASTEXEC',['../sections_8h.html#a83ebeb673c6b3ca458ddd1e52a2023ce',1,'sections.h']]],
+  ['flush_2',['flush',['../struct_p_l_u_g_g_a_b_l_e___t_r_a_n_s_p_o_r_t__t.html#a1e75bccd0531a8b506c2398cd37b7e8f',1,'PLUGGABLE_TRANSPORT_t']]],
+  ['format_3',['format',['../struct_p_l_u_g_g_a_b_l_e___s_t_o_r_a_g_e__t.html#a0bb7df8af9b3f8b4b7188f0413ffb1f3',1,'PLUGGABLE_STORAGE_t']]]
 ];

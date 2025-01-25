@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['init_0',['init',['../struct_p_l_u_g_g_a_b_l_e___s_t_o_r_a_g_e__t.html#aab8ea86c60ceead439840bc081c64ca0',1,'PLUGGABLE_STORAGE_t::init'],['../struct_p_l_u_g_g_a_b_l_e___t_r_a_n_s_p_o_r_t__t.html#ace14fa1fa6cd2c050a8b71ec3c76e082',1,'PLUGGABLE_TRANSPORT_t::init']]]
+  ['m_5fpi_0',['M_PI',['../constants_8h.html#ae71449b1cc6e6250b91f539153a7a0d3',1,'constants.h']]],
+  ['m_5fpi_5fl_1',['M_PI_L',['../constants_8h.html#a35391f56676dfa7bbbe38163417fdf5e',1,'constants.h']]],
+  ['memmap_5fcheck_5ffastmem_2',['memmap_check_fastmem',['../sections_8c.html#aca9d7aafde25d39135cd78ec38ba46ad',1,'memmap_check_fastmem(HAL_ADDRESS_t ptr):&#160;sections.c'],['../sections_8h.html#aca9d7aafde25d39135cd78ec38ba46ad',1,'memmap_check_fastmem(HAL_ADDRESS_t ptr):&#160;sections.c']]]
 ];
