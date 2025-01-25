@@ -52,6 +52,21 @@ typedef uint32_t HAL_ADDRESS_t;
 typedef uint32_t PORTSELECTOR_t;
 typedef HAL_BASE_t PINSELECTOR_t;
 
+#elif defined __riscv
+// Targeting RISC-V
+    #if __riscv_xlen == 32
+        typedef uint32_t HAL_BASE_t;
+        typedef uint32_t HAL_INT_t;
+        typedef volatile uint32_t HAL_SFR_t;
+        typedef uint32_t HAL_ADDRESS_t;
+        #ifdef __CH32V00x_H
+        typedef uint32_t PORTSELECTOR_t;
+        typedef HAL_BASE_t PINSELECTOR_t;
+        #else
+          #error "RISC-V platform not supported."
+        #endif 
+    #endif
+
 #elif (defined __linux__ || defined _WIN32)
 // 64-bit development platforms
 

@@ -65,6 +65,19 @@
     static inline void global_interrupt_disable(void){
         __disable_irq();
     }
+#elif defined __riscv
+    #if defined __CH32V00x_H
+    // Use definitions of ch32v003fun.h 
+    static inline void global_interrupt_enable(void){
+        __enable_irq();
+    }
+    
+    static inline void global_interrupt_disable(void){
+        __disable_irq();
+    }
+    #else
+        #error "RISC-V platform not supported"
+    #endif
 #elif (defined __linux__ || defined _WIN32)
     static inline void global_interrupt_enable(void){
         ;

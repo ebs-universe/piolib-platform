@@ -5,17 +5,17 @@
 
 #include <application.h>
 #include <stdarg.h>
-#include "platform/types.h"
+#include "types.h"
 
 
 void die(void);
+
+#if APP_ENABLE_DEBUG
 
 HAL_BASE_t _debug_putchar(char c);
 HAL_BASE_t _debug_write(const void *buffer, HAL_BASE_t len);
 HAL_BASE_t _debug_printf(const char *format, va_list args);
 void _debug_flush(void);
-
-#if APP_ENABLE_DEBUG
 
 static inline HAL_BASE_t debug_putchar(char c) {
     return _debug_putchar(c);
