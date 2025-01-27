@@ -67,7 +67,6 @@
     }
 #elif defined __riscv
     #if defined __CH32V00x_H
-    // Use definitions of ch32v003fun.h 
     static inline void global_interrupt_enable(void){
         __enable_irq();
     }
@@ -96,7 +95,7 @@ static inline void critical_exit(void){
     global_interrupt_enable();
 }
 
-static inline volatile void nop (void) {
+static inline void nop (void) {
     asm volatile("nop");
 }
 

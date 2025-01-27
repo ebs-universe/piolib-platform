@@ -26,7 +26,7 @@ typedef union {
 #if __riscv_xlen == 32
 typedef struct {
     uint32_t mstatus;
-    uint32_t mtval;
+    uint32_t mtvec;
     uint32_t mcause;
     uint32_t mepc;
 } RV32_FAULT_t;
@@ -49,10 +49,9 @@ void die(void) {
     #if __riscv_xlen == 32
         RV32_FAULT_t fault;
         #ifdef __CH32V00x_H
-        // It is unclear how portable this is. Presently used for 
-        // CH32V00xx only, using primitives from ch32v003fun.h
+        // It is unclear how portable this is. 
         fault.mstatus = __get_MSTATUS();
-        fault.mtval = __get_MTVAL();
+        fault.mtvec = __get_MTVEC();
         fault.mcause = __get_MCAUSE();
         fault.mepc = __get_MEPC();
         #endif
